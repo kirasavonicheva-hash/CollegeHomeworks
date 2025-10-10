@@ -1,13 +1,23 @@
-def calculate_call_cost ( call_cost, operator_from, operator_to):
-    tariff_rates = {
-        "МТС": 1.5,
+tariffs = \
+    {
+        "MTS": 5.0,
         "Билайн": 1.2,
-        "Мегафон": 1.8,
-        "Теле2": 1.0
+        "Megafon": 1.8,
+        "Tele2": 1.0
     }
-    if operator_from not in tariff_rates:
-        print("Ошибка! Неправильно указан оператор звонящего.")
-        return None
-    if operator_to not in tariff_rates:
-        print("Ошибка! Неправильно указан оператор принимающего звонок.")
-    return None
+print("Tele2")
+print("MTS")
+a = input("Введите номер вашего оператора:")
+b = input("Введите номер оператора, которому вы звоните:")
+if a == "MTS" and b == "MTS":
+    print(100*3)
+if a == "MTS" and b == "Megafon":
+    print(100*2)
+if a == "MTS" and b == "Tele2":
+    print(100*1)
+if a == "Tele2" and  b == "Tele2":
+    print(100*1)
+if a == "Tele2" and b == "Megafon":
+    print(100*2)
+if a == "Megafon" and b == ("Megafon"):
+    print(100*1)
